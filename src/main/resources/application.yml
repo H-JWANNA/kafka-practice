@@ -1,0 +1,4 @@
+spring:
+  kafka:
+    producer:
+      retries: 100
