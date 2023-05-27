@@ -21,4 +21,11 @@ public class ProducerController {
 
 		return "published a message : " + message;
 	}
+
+	@GetMapping("/v1")
+	public String publishWithCallback(@RequestParam String message) {
+		producerService.sendWithCallback(message);
+
+		return "(v2) published a message : " + message;
+	}
 }
